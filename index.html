@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechine Brain: Basic Addition</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="wrapper">
+        <aside id="side-nav" class="menu">
+            <span class="closebtn" onclick="closeNav()">&times;</span>
+            <h1><span class="m">M</span>ec<span class="h">h</span>in<span class="e">e</span> <span class="b">B</span>r<span class="a">a</span>i<span class="n">n</span></h1>
+            <ol>
+                <li><a href="#welcome-link"><h3>Welcome to<span class="continuation2">...</span><span class="mechine-display"> Mechine</span><span class="continuation1">...</span> <span class="brain-display">Brain!</span></h3></a></li>
+                <li><a href="#the-theory"><h3>The Theory</h3></a></li>
+            </ol>
+            <h1>The Games</h1>
+            <ol class="menu-games-list">
+                <li><a href="#basic-addition-link"><h3>Basics</h3></a></li>
+                <li><a href="#beginner-link"><h3>Beginner</h3></a></li>
+                <li><a href="#intermediate-link"><h3>Intermediate</h3></a></li>
+                <li><a href="#advanced-link"><h3>Advanced</h3></a></li>
+                <li><a href="#master-link"><h3>Master</h3></a></li>
+                <li><a href="#expert-link"><h3>Expert Mode</h3></a></li>
+                <li><a href="#next-level-link"><h3>Next Level</h3></a></li>
+            </ol>
+            <div class="social-icons">
+                <i class="fa-brands fa-github"><a href="https://github.com/PeaLanie" target="_blank"> Github</a></i>
+                <i class="fa-brands fa-linkedin"><a href="https://www.linkedin.com/in/thembinkosi-mkhungo-674a11244/" target="_blank"> LinkedIn</a></i>
+                <i class="fa-brands fa-facebook-square"><a href="https://www.facebook.com/pealanie.sodium" target="_blank"> Facebook</a></i>
+                <i class="fa-brands fa-instagram"><a href="https://www.instagram.com/pealanie.sodium/" target="_blank"> Instagram</a></i>
+                <i class="fa-solid fa-envelope"><a href="mailto:pealanie.sodium@gmail.com target="_blank""> Email</a></i>
+            </div>
+            <footer>Mechine Brain &copy; 2022</footer>
+        </aside>
+        <main class="main-content">
+            <div id="menu-icon" class="menu-bar-icon" onclick="openNav()">&#9776;</div>
+            <h2 id="welcome-link">Welcome to Mechine Brain!</h2>
+            <div class="content-intro">
+                <p>
+                    Welcome to the "<i>Basic Addition</i>" game, which is not really a game because being stuck on adding up basic easy numbers is not really a game; it's embarasing. Adding basic numbers such as 1-9 shouldn't be a hustle. We have built this game to make it easy for everyone. At the end of this game you should be able to add up numbers like, this: 3 + 7 + 4 + 9 + 1, like a pro.
+                </p>
+                <p>
+                    Here at <a href="">Mechine Brain</a> we are going to teach you our theory behind adding intergers (Note: the use of <strong>intergers</strong> (whole numbers) is intensonal, because our theory is reliant on numbers with no decimals). At the beginning it will feel dounting and difficult, but with a little bit of practice; you should see the difference.
+                </p>
+                <h3 id="the-theory">
+                    The Basic Theory
+                </h3>
+                <p>
+                    When adding a list of numbers like: 3 + 7 + 4 + 9 + 1, the trick is to simplify the list of digits into easy numbers that can be added with little effort. In the list above, wouldn't it be easy to first add 9 and 1? Yes! Because 9 and 1 adds up to 10. 7 and 3 also adds up to 10. Now you know that you're left with 4. By adding 10 (which is 9 + 1) and 10 (which is 7 + 3) and 4 it is easy to conclude that the sum is 24.
+                </p>
+                <p>
+                    Always try to simplify numbers to either 10 or 5, simply because it is much easier to add those than the numbers in between (Always think...which numbers to add first!). Look at the diagrams below which further illustrates this point:
+                </p>
+            </div>
+
+
+            <div class="games basics">
+                <div class="game addition">
+                    <h3 id="basic-addition-link" class="h3-subh">Basic Addition</h3>
+                    <strong class="how-to">How to add up a list of real numbers between 1 and 9?</strong>
+                    <div class="examples">Example #1</div>
+                    <p>
+                        There's probably many ways you can go about adding these numbers. But in this course we trieve to find "the easiest" path to the sum! Follow the steps below:
+                    </p>
+                    <div class="steps-and-illustrations">
+                        <ol class="steps">
+                            <li>
+                                Fill in both the numbers 9 to make them 10 (<i>simplification</i> that we spoke about before). A reasonable question would be; fill them with what?!<br><br>Well as you can see from the diagram on the right, we take 2 from 4, distribute it amongst the 9's, which leave us with the following new list:<br>8 + 2 + 10 + 10 + 7
+                            </li><br>
+                            <li>
+                                The following step is to add 8 and 2, which make the list very easy to sum up by now.
+                            </li><br>
+                            <li>
+                                The final step is to add all the 10's and the 7, which clearly equals to 37.
+                            </li>
+                        </ol>
+                        <div class="illustrations">
+                            <div class="above">
+                                <span class="indicator">#1</span>
+                                <div class="list">
+                                    8+4+9+9+7
+                                </div>
+                                <div class="ill-p">below is the easiest path to the sum!</div>
+                            </div>
+                            <div class="below">
+                                    <span class="indicator">#1 continued</span>
+                                    <div class="list">
+                                        8+4+9+9+7
+                                    </div>
+                                    <div class="steps">
+                                        step one:
+                                    </div>
+                                    <div class="list">
+                                        8+<span class="red">2</span>+<span class="green">10+10</span>+7
+                                    </div>
+                                    <div class="steps">
+                                        step two:
+                                    </div>
+                                    <div class="list">
+                                        <span class="green">10+10+10</span>+7
+                                    </div>
+                                    <div class="steps">
+                                        step three:
+                                    </div>
+                                    <div class="list">
+                                        37
+                                    </div>
+                                    <span class="small r">-2</span>
+                                    <span class="small g x">+1</span>
+                                    <span class="small g y">+1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="examples">Example #2</div>
+                    <p>
+                        The first thing you want to do is to scan your list in order to find simple ways to add your numbers. After that it's only just a matter of memory...what do I mean? Once you've simplified your numbers, you got to always remember the modification done.
+                    </p>
+                    <div class="steps-and-illustrations">
+                        <ol class="steps">
+                            <li>
+                                Take the 2 in the end and split it between the 9's. The new list is: 10 + 10 + 7 + 5 + 0, but since 0 is nothing, you can throw it away.
+                            </li><br>
+                            <li>
+                                The second obvious step is to split 7 into 2 and 5 to simplify our list. It's easier to add 5's and 10's than it is to add 7,6,9 and so on.
+                            </li><br>
+                            <li>
+                                Adding the 5's gives us a much simpler list of 10's and a 2. Final answer is 32
+                            </li>
+                        </ol>
+                        <div class="illustrations">
+                            <div class="above">
+                                <span class="indicator">#2</span>
+                                <div class="list">
+                                    9+9+7+5+2
+                                </div>
+                                <div class="ill-p">below is the easiest path to the sum!</div>
+                            </div>
+                            <div class="below">
+                                    <span class="indicator">#2 continued</span>
+                                    <div class="list">
+                                        9+9+7+5+2
+                                    </div>
+                                    <div class="steps">
+                                        step one:
+                                    </div>
+                                    <div class="list">
+                                        10+10+7+5+<span class="red">0</span>
+                                    </div>
+                                    <div class="steps">
+                                        step two:
+                                    </div>
+                                    <div class="list">
+                                        10+10+<span class="green">2+5</span>+5
+                                    </div>
+                                    <div class="steps">
+                                        step three:
+                                    </div>
+                                    <div class="list">
+                                        32
+                                    </div>
+                                    <span class="small rx2">-2</span>
+                                    <span class="small g xx2">+1</span>
+                                    <span class="small g yx2">+1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="examples">Example #3</div>
+                    <p>
+                        As always, scan through your list and find the most efficient and effective way to add your numbers. Look through the steps below to familiarize yourself with the method.
+                    </p>
+                    <div class="steps-and-illustrations">
+                        <ol class="steps">
+                            <li>
+                                First add 2 and 8 which equals 10. Split 8 in between to get two seperate 4's, take one 4 and add with 6 to get another 10. Here is the new list: 10 + 10 + 4 + 7
+                            </li><br>
+                            <li>
+                                To make the list much simpler, we split 4 into 1 and 3. Take that 3 add it to 7 to once again get another 10. Here is the new list: 10 + 10 + 10 + 1
+                            </li><br>
+                            <li>
+                                By now it's pretty obvious the answer is: 31
+                            </li>
+                        </ol>
+                        <div class="illustrations">
+                            <div class="above">
+                                <span class="indicator">#3</span>
+                                <div class="list">
+                                    2+8+8+6+7
+                                </div>
+                                <div class="ill-p">below is the easiest path to the sum!</div>
+                            </div>
+                            <div class="below">
+                                    <span class="indicator">#1 continued</span>
+                                    <div class="list">
+                                        2+8+8+6+7
+                                    </div>
+                                    <div class="steps">
+                                        step one:
+                                    </div>
+                                    <div class="list">
+                                        10+10+4+7
+                                    </div>
+                                    <div class="steps">
+                                        step two:
+                                    </div>
+                                    <div class="list">
+                                        10+10+10+1
+                                    </div>
+                                    <div class="steps">
+                                        step three:
+                                    </div>
+                                    <div class="list">
+                                        31
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Below is a practice platform, practice as much as you want until you feel that you are good enough, and then move on to the much complex section.
+                    </p>
+                </div>
+                <div class="independant-game">
+                    <section class="the-game">
+                        <h3><span>Y</span>our <span>P</span>ractice <span>P</span>latform</h3>
+                        <div class="the-list">
+                            <span class="individual-numbers" id="basic1"></span>
+                            <span class="plus">+</span>
+                            <span class="individual-numbers" id="basic2"></span>
+                            <span class="plus">+</span>
+                            <span class="individual-numbers" id="basic3"></span>
+                            <span class="plus">+</span>
+                            <span class="individual-numbers" id="basic4"></span>
+                            <span class="plus">+</span>
+                            <span class="individual-numbers" id="basic5"></span>
+                        </div>
+                        <div class="controls">
+                            <label for="">Enter Answer:</label><br>
+                            <input type="text" id="usersAnswer1" name="users_answer" placeholder="Your Answer..."><br>
+                            <button type="button" id="submit" class="gameBtns-submit" onclick="checkAnswer('basic1', 'basic2', 'basic3', 'basic4', 'basic5', 'outPut1', 'usersAnswer1')">Submit</button>
+                            <button type="button" id="reload" class="gameBtns-reload" onclick="window.location.reload()">Reload</button>
+                        </div>
+                        <div id="outPut1">Stuck??? Just click "Submit" to check the correct answer. After that click "Reload" to get a new list and try again.</div>
+                    </section>
+                </div>
+                <p>
+                    I strongly suggest that you practice the section above before moving on because the following sections are dependant on this section.
+                </p>
+            </div>
+
+
+            <div class="games">
+                <div class="game">
+                    <h3 id="beginner-link" class="h3-subh">Beginner Mode</h3>
+                    <p>
+                        Congratulations for making it to beginner mode!...were you expand your addition skills to the next level. Instead of adding intergers between 1 and 9 now you have to consider a zero after each digit. Your growth in this mode is dependant on the previous mode (<a href="#basic-addition-link">Basic Addition</a>)
+                    </p>
+                    <p>
+                        The method is the same but with the consideration of zero. <strong>Remember this is a lifetime skill that you can use anytime in your life</strong>
+                    </p>
+                    <strong class="how-to">How to add up a list of real numbers between 10 and 90 with increments of 10?</strong>
+                    <div class="examples">Example #1</div>
+                    <p>
+                        In this mode you pretend as if the zero is invisible and add numbers like you did in the <a href="#basic-addition-link">Basic Addition Mode</a>. After adding the numbers you insert the zero in the end. Look at some exampes below:
+                    </p>
+                    <p>
+                        To understand these examples you must be familiar with the <a href="#basic-addition-link">Basics of Addition</a>. Follow the steps below to understand the method behind adding real numbers between 10 and 90 with increments of 10.
+                    </p>
+                    <div class="steps-and-illustrations">
+                        <ol class="steps">
+                            <li>
+                                Hide zero from the mix.
+                            </li><br>
+                            <li>
+                                Add the numbers like you would with basic intergers between 1 and 9. If you're not familiar with this method I would strongly recommend that you go back to the <a href="#basic-addition-link">Basic Addition Mode</a>.
+                            </li><br>
+                            <li>
+                                Remember the zero we hid on step one? Now is the time to insert it back. Remember that because your list is all in the 10's form; so you only insert one zero back.
+                            </li><br>
+                            <li>
+                                Now that is your final answer: 170
+                            </li>
+                        </ol>
+                        <div class="illustrations">
+                            <div class="above">
+                                <span class="indicator">#1</span>
+                                <div class="list">
+                                    30+50+20+30+40
+                                </div>
+                                <div class="ill-p">below is the easiest path to the sum!</div>
+                            </div>
+                            <div class="below">
+                                    <span class="indicator">#1 continued</span>
+                                    <div class="list">
+                                        30+50+20+30+40
+                                    </div>
+                                    <div class="steps">
+                                        step one:
+                                    </div>
+                                    <div class="list">
+                                        3+5+2+3+4
+                                    </div>
+                                    <div class="steps">
+                                        step two:
+                                    </div>
+                                    <div class="list">
+                                        17 & insert 0
+                                    </div>
+                                    <div class="steps">
+                                        answer:
+                                    </div>
+                                    <div class="list">
+                                        170
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="examples">Example #2</div>
+                    <div class="steps-and-illustrations">
+                        <ol class="steps">
+                            <li>
+                                Hide zero from the mix.
+                            </li><br>
+                            <li>
+                                Add the numbers like you would with basic intergers between 1 and 9.
+                            </li><br>
+                            <li>
+                                Remember the zero we hid on step one? Now is the time to insert it back.
+                            </li><br>
+                            <li>
+                                Now that is your final answer: 310
+                            </li>
+                        </ol>
+                        <div class="illustrations">
+                            <div class="above">
+                                <span class="indicator">#2</span>
+                                <div class="list">
+                                    40+80+70+50+70
+                                </div>
+                                <div class="ill-p">below is the easiest path to the sum!</div>
+                            </div>
+                            <div class="below">
+                                    <span class="indicator">#2 continued</span>
+                                    <div class="list">
+                                        40+80+70+50+70
+                                    </div>
+                                    <div class="steps">
+                                        step one:
+                                    </div>
+                                    <div class="list">
+                                        4+8+7+5+7
+                                    </div>
+                                    <div class="steps">
+                                        step two:
+                                    </div>
+                                    <div class="list">
+                                        31 & insert 0
+                                    </div>
+                                    <div class="steps">
+                                        answer:
+                                    </div>
+                                    <div class="list">
+                                        310
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="examples">Example #3</div>
+                    <p>
+                        As always, scan through your list and find the most efficient and effective way to add your numbers. Look through the steps below to familiarize yourself with the method.
+                    </p>
+                    <div class="steps-and-illustrations">
+                        <ol class="steps">
+                            <li>
+                                Hide zero from the mix.
+                            </li><br>
+                            <li>
+                                Add the numbers like you would with basic intergers between 1 and 9.
+                            </li><br>
+                            <li>
+                                Remember the zero we hid on step one? Now is the time to insert it back.
+                            </li><br>
+                            <li>
+                                Now that is your final answer: 150
+                            </li>
+                        </ol>
+                        <div class="illustrations">
+                            <div class="above">
+                                <span class="indicator">#3</span>
+                                <div class="list">
+                                    50+20+20+20+40
+                                </div>
+                                <div class="ill-p">below is the easiest path to the sum!</div>
+                            </div>
+                            <div class="below">
+                                    <span class="indicator">#3 continued</span>
+                                    <div class="list">
+                                        50+20+20+20+40
+                                    </div>
+                                    <div class="steps">
+                                        step one:
+                                    </div>
+                                    <div class="list">
+                                        5+2+2+2+4
+                                    </div>
+                                    <div class="steps">
+                                        step two:
+                                    </div>
+                                    <div class="list">
+                                        15 & insert 0
+                                    </div>
+                                    <div class="steps">
+                                        answer:
+                                    </div>
+                                    <div class="list">
+                                        150
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Below is Your Practice Platform (YPP), practice as much as you want until you feel that you are good enough, and then move on to the much complex sections.
+                    </p>
+                </div>
+                <div class="independant-game">
+                    <section class="the-game">
+                        <h3><span>Y</span>our <span>P</span>ractice <span>P</span>latform</h3>
+                        <div class="the-list">
+                            <span class="individual-numbers" id="beginner1"></span>
+                            <span class="plus">+</span>
+                            <span class="individual-numbers" id="beginner2"></span>
+                            <span class="plus">+</span>
+                            <span class="individual-numbers" id="beginner3"></span>
+                            <span class="plus">+</span>
+                            <span class="individual-numbers" id="beginner4"></span>
+                            <span class="plus">+</span>
+                            <span class="individual-numbers" id="beginner5"></span>
+                        </div>
+                        <div class="controls">
+                            <label for="">Enter Answer:</label><br>
+                            <input type="text" id="usersAnswer2" name="users_answer" placeholder="Your Answer..."><br>
+                            <button type="button" id="submit" class="gameBtns-submit" onclick="checkAnswer('beginner1', 'beginner2', 'beginner3', 'beginner4', 'beginner5', 'outPut2', 'usersAnswer2')">Submit</button>
+                            <button type="button" id="reload" class="gameBtns-reload" onclick="window.location.reload()">Reload</button>
+                        </div>
+                        <div id="outPut2">Stuck??? Just click "Submit" to check the correct answer. After that click "Reload" to get a new list and try again.</div>
+                    </section>
+                </div>
+                <p>
+                    More game are coming soon!...
+                </p>
+            </div>
+
+
+
+        </main>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>

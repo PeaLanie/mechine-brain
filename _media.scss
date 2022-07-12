@@ -1,0 +1,92 @@
+
+@media screen and (max-width: 2560px) {
+    .menu-bar-icon, .closebtn{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    .wrapper{
+        display: flex;
+        .menu{
+            flex-basis: 60%;
+            .brain-display{
+                display: none;
+            }
+            .continuation1{
+                display: inline;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper{
+        .menu{
+            .mechine-display{
+                display: none;
+            }
+        }
+        .menu-games-list{
+            padding: 0 !important;
+            margin: 1rem 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-content{
+        .games{
+            .steps-and-illustrations{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .independant-game{
+                .the-game{
+                    h3{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .menu{
+        display: none;
+        transition: 0.5s;
+    }
+    .menu-bar-icon{
+        display: block;
+    }
+    .closebtn{
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .wrapper{
+        .main-content{
+            .menu-bar-icon{
+                position: fixed;
+                top: .5rem;
+                left: .5rem;
+            }
+            .independant-game{
+                .the-game{
+                    h3{
+                        font-size: 1.5rem;
+                    }
+                    .individual-numbers, .plus{
+                        font-size: 1.5rem;
+                    }
+                }
+                .controls{
+                    input, button{
+                        width: 250px;
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}

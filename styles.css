@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #FAFAFA;
+  --grey: #c2c2c2;
+  --primary-background: #F0F0F0;
+  --minion-yellow: #ffe74cff;
+  --fiery-rose: #ff5964ff;
+  --white: #ffffffff;
+  --prussian-blue: #17375aff;
+  --blue-jeans: #35a7ffff;
+  --blue-jeans-less: rgb(98, 187, 255);
+  --blue-jeans-lesser: rgb(205, 233, 255);
+  --shadow-box: 10px 10px 20px #17375aff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--prussian-blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+body a {
+  text-decoration: none;
+  color: var(--blue-jeans);
+}
+body a:hover {
+  color: var(--prussian-blue);
+}
+
+.wrapper {
+  display: flex;
+}
+.wrapper .menu-bar-icon {
+  padding: 0.5rem;
+  position: fixed;
+  border: 2px solid;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 7px;
+  background-color: var(--white);
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 7;
+}
+.wrapper .menu {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  flex-basis: 40%;
+  background-color: var(--blue-jeans-less);
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 1rem 1rem 1rem;
+  border-right: 5px solid var(--fiery-rose);
+}
+.wrapper .menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  cursor: pointer;
+}
+.wrapper .menu .continuation1 {
+  display: none;
+}
+.wrapper .menu .continuation2 {
+  display: none;
+}
+.wrapper .menu h3 {
+  font-weight: normal;
+}
+.wrapper .menu a {
+  color: var(--prussian-blue);
+}
+.wrapper .menu a:hover {
+  text-decoration: underline;
+}
+.wrapper .menu ol {
+  list-style: none;
+  padding-top: 2rem;
+}
+.wrapper .menu .menu-games-list {
+  padding: 1rem;
+  margin: 1rem;
+  list-style: decimal;
+}
+.wrapper .menu .social-icons {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 1rem;
+  box-shadow: 0px -2px 10px black;
+  color: var(--primary-background);
+  background-color: var(--blue-jeans);
+}
+.wrapper .menu h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border: 2px dashed;
+  margin-top: 1rem;
+}
+.wrapper .menu h1 .m {
+  color: rgb(255, 221, 0);
+  font-size: 2.1rem;
+  font-weight: 800;
+}
+.wrapper .menu h1 .h {
+  color: rgb(132, 3, 218);
+}
+.wrapper .menu h1 .e {
+  color: rgb(124, 2, 2);
+}
+.wrapper .menu h1 .a {
+  color: rgb(63, 49, 253);
+}
+.wrapper .menu h1 .n {
+  color: rgb(0, 255, 234);
+}
+.wrapper .menu h1 .b {
+  color: rgb(102, 255, 161);
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+.wrapper .menu footer {
+  position: absolute;
+  left: 5%;
+  bottom: 1%;
+  font-weight: 900;
+  text-align: center;
+  padding-bottom: 0.5rem 0;
+}
+.wrapper .main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem 1rem 1rem;
+}
+.wrapper .main-content h2 {
+  color: var(--fiery-rose);
+}
+.wrapper .main-content .content-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .main-content .content-intro p {
+  width: 80%;
+}
+.wrapper .main-content h2, .wrapper .main-content h3 {
+  text-align: center;
+  padding: 1rem 0;
+}
+.wrapper .main-content .content-intro p {
+  padding: 1rem;
+  background-color: var(--primary-background);
+  border-radius: 10px;
+}
+.wrapper .main-content .games p {
+  padding: 1rem;
+  background-color: var(--primary-background);
+  border-radius: 10px;
+  width: 80%;
+  margin: 1rem auto;
+}
+.wrapper .main-content .games .game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .main-content .games .game .h3-subh {
+  border: 2px dashed rgb(153, 153, 153);
+  margin: 1rem 0;
+  width: 100%;
+  background-color: var(--blue-jeans-lesser);
+  text-transform: uppercase;
+}
+.wrapper .main-content .games .game .examples {
+  font-weight: 800;
+  color: var(--blue-jeans);
+  border-top: 1px dashed;
+  margin-top: 1rem;
+  width: 100%;
+}
+.wrapper .main-content .games .game .how-to {
+  color: var(--fiery-rose);
+}
+.wrapper .main-content .independant-game {
+  border: 1px solid var(--blue-jeans);
+  border-radius: 10px;
+  box-shadow: var(--shadow-box);
+  padding: 1rem;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+.wrapper .main-content .independant-game .the-game .oops {
+  color: var(--fiery-rose);
+  font-weight: 700;
+}
+.wrapper .main-content .independant-game .the-game h3 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: var(--blue-jeans);
+  text-decoration: underline;
+  letter-spacing: 4px;
+}
+.wrapper .main-content .independant-game .the-game h3 span {
+  color: var(--fiery-rose);
+  font-weight: 500;
+}
+.wrapper .main-content .independant-game .the-game .greenNum {
+  color: green;
+  font-weight: 700;
+}
+.wrapper .main-content .independant-game .individual-numbers, .wrapper .main-content .independant-game .plus {
+  font-size: 3rem;
+}
+.wrapper .main-content .independant-game input {
+  width: 300px;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--primary-background);
+}
+.wrapper .main-content .independant-game button {
+  width: 150px;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.wrapper .main-content .independant-game .gameBtns-submit {
+  border: 2px solid var(--blue-jeans);
+}
+.wrapper .main-content .independant-game .gameBtns-submit:hover {
+  background-color: var(--blue-jeans);
+  color: var(--white);
+}
+.wrapper .main-content .independant-game .gameBtns-reload {
+  border: none;
+  background-color: var(--fiery-rose);
+  color: var(--white);
+}
+.wrapper .main-content .independant-game .gameBtns-reload:hover {
+  background-color: var(--blue-jeans);
+}
+.wrapper .main-content .steps-and-illustrations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+  width: 80%;
+  padding: 1rem;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  gap: 0.5rem;
+  width: 400px;
+  height: 400px;
+  font-weight: bold;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .above {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid var(--blue-jeans);
+  border-top-right-radius: 20px;
+  border-left: 2px dashed var(--grey);
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .above .ill-p {
+  padding-top: 1.5rem;
+  color: var(--grey);
+  font-style: italic;
+  font-weight: normal;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below {
+  border: 2px solid var(--blue-jeans);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: -5px 5px 5px var(--grey);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  position: relative;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .green {
+  border: 2px solid var(--blue-jeans);
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .red {
+  border: 2px solid red;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .steps {
+  text-align: center;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .indicator {
+  align-self: start;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .r, .wrapper .main-content .steps-and-illustrations .illustrations .below .x, .wrapper .main-content .steps-and-illustrations .illustrations .below .y, .wrapper .main-content .steps-and-illustrations .illustrations .below .rx2, .wrapper .main-content .steps-and-illustrations .illustrations .below .xx2, .wrapper .main-content .steps-and-illustrations .illustrations .below .yx2 {
+  position: absolute;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .r {
+  top: 40px;
+  left: 185px;
+  color: red;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .rx2 {
+  top: 45px;
+  left: 330px;
+  color: red;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .g {
+  color: var(--blue-jeans);
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .x {
+  top: 40px;
+  left: 239px;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .xx2 {
+  top: 45px;
+  left: 239px;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .y {
+  top: 40px;
+  left: 286px;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .below .yx2 {
+  top: 45px;
+  left: 286px;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .list {
+  font-size: 2.5rem;
+}
+.wrapper .main-content .steps-and-illustrations .illustrations .indicator {
+  color: var(--grey);
+  padding: 5px;
+  font-style: italic;
+}
+
+@media screen and (max-width: 2560px) {
+  .menu-bar-icon, .closebtn {
+    display: none;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    display: flex;
+  }
+  .wrapper .menu {
+    flex-basis: 60%;
+  }
+  .wrapper .menu .brain-display {
+    display: none;
+  }
+  .wrapper .menu .continuation1 {
+    display: inline;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrapper .menu .mechine-display {
+    display: none;
+  }
+  .wrapper .menu-games-list {
+    padding: 0 !important;
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-content .games .steps-and-illustrations {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .main-content .games .independant-game .the-game h3 {
+    font-size: 2rem;
+  }
+  .menu {
+    display: none;
+    transition: 0.5s;
+  }
+  .menu-bar-icon {
+    display: block;
+  }
+  .closebtn {
+    display: inline;
+  }
+}
+@media screen and (max-width: 425px) {
+  .wrapper .main-content .menu-bar-icon {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+  .wrapper .main-content .independant-game .the-game h3 {
+    font-size: 1.5rem;
+  }
+  .wrapper .main-content .independant-game .the-game .individual-numbers, .wrapper .main-content .independant-game .the-game .plus {
+    font-size: 1.5rem;
+  }
+  .wrapper .main-content .independant-game .controls input, .wrapper .main-content .independant-game .controls button {
+    width: 250px;
+    padding: 0.5rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
