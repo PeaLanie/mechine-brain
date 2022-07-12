@@ -307,7 +307,7 @@ body{
                         border: 2px solid var(--blue-jeans);
                     }
                     .red{
-                        border: 2px solid red;
+                        border: 2px solid var(--fiery-rose);
                     }
                     .steps{
                         text-align: center;
@@ -321,12 +321,12 @@ body{
                     .r{
                         top: 40px;
                         left: 185px;
-                        color: red;
+                        color: var(--fiery-rose);
                     }
                     .rx2{
                         top: 45px;
                         left: 330px;
-                        color: red;
+                        color: var(--fiery-rose);
                     }
                     .g{
                         color: var(--blue-jeans);
