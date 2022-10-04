@@ -55,20 +55,14 @@ body{
         background-color: var(--blue-jeans-less);
         width: 100%;
         height: 100vh;
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 1rem;
         border-right: 5px solid var(--fiery-rose);
         .closebtn {
-            position: absolute;
-            top: 0;
-            right: 10px;
+            //position: absolute;
+            //top: 0;
+            //right: 10px;
             font-size: 36px;
             cursor: pointer;
-        }
-        .continuation1{
-            display: none;
-        }
-        .continuation2{
-            display: none;
         }
         h3{
             font-weight: normal;
@@ -81,70 +75,39 @@ body{
         }
         ol{
             list-style: none;
-            padding-top: 2rem;
-        }
-        .menu-games-list{
             padding: 1rem;
-            margin: 1rem;
-            list-style: decimal;
+            line-height: 2.2rem;
         }
         .social-icons{
-            position: absolute;
-            left: 0;
-            bottom: 5%;
-            display: grid;
-            gap: .5rem;
-            width: 100%;
-            font-size: 1rem;
-            border-top: 1px solid;
-            border-bottom: 1px solid;
-            padding: 1rem;
-            box-shadow: 0px -2px 10px black;
-            color: var(--primary-background);
-            background-color: var(--blue-jeans);
+            display: flex;
+            font-size: 1.5rem;
+            justify-content: space-evenly;
         }
         h1{
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 5px;
             border: 2px dashed;
-            margin-top: 1rem;
-            .m{
-                color: rgb(255, 221, 0);
-                font-size: 2.1rem;
-                font-weight: 800;
-            }
-            .h{
-                color: rgb(132, 3, 218);
-            }
-            .e{
-                color: rgb(124, 2, 2);
-            }
-            .a{
-                color: rgb(63, 49, 253);
-            }
-            .n{
-                color: rgb(0, 255, 234);
-            }
-            .b{
-                color: rgb(102, 255, 161);
-                font-size: 2.3rem;
-                font-weight: 800;
-            }
         }
+            .m{
+                color: var(--fiery-rose);
+                font-size: 2rem;
+                font-weight: 800;
+            }
         footer{
-            position: absolute;
-            left: 5%;
-            bottom: 1%;
-            font-weight: 900;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 2rem;
+            width: 100%;
             text-align: center;
-            padding-bottom: .5rem 0;
+            font-weight: 900;
         }
     }
     .main-content{
         display: flex;
         flex-direction: column;
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 1rem;
         h2{
             color: var(--fiery-rose);
         }
@@ -194,8 +157,9 @@ body{
                 .how-to{
                     color: var(--fiery-rose);
                 }
-                }
             }
+        }
+    
             .independant-game{
                 border: 1px solid var(--blue-jeans);
                 border-radius: 10px;
@@ -237,7 +201,6 @@ body{
                     border: none;
                     border-radius: 30px;
                     background-color: var(--primary-background);
-
                 }
                 button{
                     width: 150px;
@@ -262,7 +225,7 @@ body{
                         background-color: var(--blue-jeans);
                     }
                 }
-        }
+            }
         .steps-and-illustrations{
             display: grid;
             grid-template-columns: repeat(2, 1fr);

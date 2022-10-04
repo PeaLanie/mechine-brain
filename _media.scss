@@ -11,11 +11,8 @@
         display: flex;
         .menu{
             flex-basis: 60%;
-            .brain-display{
-                display: none;
-            }
-            .continuation1{
-                display: inline;
+            ol{
+                line-height: 2rem;
             }
         }
     }
@@ -24,13 +21,12 @@
 @media screen and (max-width: 1024px) {
     .wrapper{
         .menu{
-            .mechine-display{
-                display: none;
+            ol{
+                line-height: 1.5rem;
             }
-        }
-        .menu-games-list{
-            padding: 0 !important;
-            margin: 1rem 0;
+            // .menu-games-list{
+                
+            // }
         }
     }
 }
@@ -59,7 +55,7 @@
         display: block;
     }
     .closebtn{
-        display: inline;
+        display: block;
     }
 }
 
@@ -82,7 +78,7 @@
                 }
                 .controls{
                     input, button{
-                        width: 250px;
+                        width: 80%;
                         padding: .5rem;
                     }
                 }

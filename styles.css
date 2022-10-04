@@ -57,21 +57,12 @@ body a:hover {
   background-color: var(--blue-jeans-less);
   width: 100%;
   height: 100vh;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
   border-right: 5px solid var(--fiery-rose);
 }
 .wrapper .menu .closebtn {
-  position: absolute;
-  top: 0;
-  right: 10px;
   font-size: 36px;
   cursor: pointer;
-}
-.wrapper .menu .continuation1 {
-  display: none;
-}
-.wrapper .menu .continuation2 {
-  display: none;
 }
 .wrapper .menu h3 {
   font-weight: normal;
@@ -84,69 +75,38 @@ body a:hover {
 }
 .wrapper .menu ol {
   list-style: none;
-  padding-top: 2rem;
-}
-.wrapper .menu .menu-games-list {
   padding: 1rem;
-  margin: 1rem;
-  list-style: decimal;
+  line-height: 2.2rem;
 }
 .wrapper .menu .social-icons {
-  position: absolute;
-  left: 0;
-  bottom: 5%;
-  display: grid;
-  gap: 0.5rem;
-  width: 100%;
-  font-size: 1rem;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  padding: 1rem;
-  box-shadow: 0px -2px 10px black;
-  color: var(--primary-background);
-  background-color: var(--blue-jeans);
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-evenly;
 }
 .wrapper .menu h1 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
   border: 2px dashed;
-  margin-top: 1rem;
 }
-.wrapper .menu h1 .m {
-  color: rgb(255, 221, 0);
-  font-size: 2.1rem;
-  font-weight: 800;
-}
-.wrapper .menu h1 .h {
-  color: rgb(132, 3, 218);
-}
-.wrapper .menu h1 .e {
-  color: rgb(124, 2, 2);
-}
-.wrapper .menu h1 .a {
-  color: rgb(63, 49, 253);
-}
-.wrapper .menu h1 .n {
-  color: rgb(0, 255, 234);
-}
-.wrapper .menu h1 .b {
-  color: rgb(102, 255, 161);
-  font-size: 2.3rem;
+.wrapper .menu .m {
+  color: var(--fiery-rose);
+  font-size: 2rem;
   font-weight: 800;
 }
 .wrapper .menu footer {
-  position: absolute;
-  left: 5%;
-  bottom: 1%;
-  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 2rem;
+  width: 100%;
   text-align: center;
-  padding-bottom: 0.5rem 0;
+  font-weight: 900;
 }
 .wrapper .main-content {
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
 }
 .wrapper .main-content h2 {
   color: var(--fiery-rose);
@@ -369,20 +329,13 @@ body a:hover {
   .wrapper .menu {
     flex-basis: 60%;
   }
-  .wrapper .menu .brain-display {
-    display: none;
-  }
-  .wrapper .menu .continuation1 {
-    display: inline;
+  .wrapper .menu ol {
+    line-height: 2rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  .wrapper .menu .mechine-display {
-    display: none;
-  }
-  .wrapper .menu-games-list {
-    padding: 0 !important;
-    margin: 1rem 0;
+  .wrapper .menu ol {
+    line-height: 1.5rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -401,7 +354,7 @@ body a:hover {
     display: block;
   }
   .closebtn {
-    display: inline;
+    display: block;
   }
 }
 @media screen and (max-width: 425px) {
@@ -417,7 +370,7 @@ body a:hover {
     font-size: 1.5rem;
   }
   .wrapper .main-content .independant-game .controls input, .wrapper .main-content .independant-game .controls button {
-    width: 250px;
+    width: 80%;
     padding: 0.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */
