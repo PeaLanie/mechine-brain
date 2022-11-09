@@ -35,34 +35,90 @@ body a:hover {
 .wrapper {
   display: flex;
 }
-.wrapper .menu-bar-icon {
-  padding: 0.5rem;
-  position: fixed;
-  border: 2px solid;
-  top: 1rem;
-  left: 1rem;
-  border-radius: 7px;
-  background-color: var(--white);
-  font-size: 30px;
+
+.full-screen-game {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.full-screen-game .independant-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--blue-jeans);
+  border-radius: 2rem;
+  box-shadow: var(--shadow-box);
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.full-screen-game .independant-game .the-game h3 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 100;
+  color: var(--blue-jeans);
+  text-decoration: underline;
+  letter-spacing: 8px;
+}
+.full-screen-game .independant-game .the-game h3 span {
+  color: var(--fiery-rose);
+  font-weight: 700;
+}
+.full-screen-game .independant-game .individual-numbers, .full-screen-game .independant-game .plus {
+  font-size: 6rem;
+}
+.full-screen-game .independant-game input {
+  width: 50%;
+  padding: 2rem;
+  font-size: 2.4rem;
+  border: none;
+  border-radius: 3.3rem;
+  background-color: var(--primary-background);
+}
+.full-screen-game .independant-game button {
+  width: 25%;
+  padding: 2rem;
+  margin: 1rem 0;
+  font-size: 2.4rem;
+  border-radius: 3.3rem;
   cursor: pointer;
-  z-index: 7;
+}
+.full-screen-game .independant-game .gameBtns-submit {
+  border: 2px solid var(--blue-jeans);
+}
+.full-screen-game .independant-game .gameBtns-submit:hover {
+  background-color: var(--blue-jeans);
+  color: var(--white);
+}
+.full-screen-game .independant-game .gameBtns-reload {
+  border: none;
+  background-color: var(--fiery-rose);
+  color: var(--white);
+}
+.full-screen-game .independant-game .gameBtns-reload:hover {
+  background-color: var(--blue-jeans);
+}
+
+.fa-xmark {
+  visibility: hidden;
+}
+.fa-bars {
+  visibility: hidden;
 }
 .wrapper .menu {
-  position: -webkit-sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   left: 0;
   top: 0;
-  z-index: 1;
-  flex-basis: 40%;
+  flex-basis: 50%;
   background-color: var(--blue-jeans-less);
-  width: 100%;
   height: 100vh;
   padding: 1rem;
-  border-right: 5px solid var(--fiery-rose);
-}
-.wrapper .menu .closebtn {
-  font-size: 36px;
-  cursor: pointer;
+  border-right: 5px dashed var(--fiery-rose);
 }
 .wrapper .menu h3 {
   font-weight: normal;
@@ -73,9 +129,8 @@ body a:hover {
 .wrapper .menu a:hover {
   text-decoration: underline;
 }
-.wrapper .menu ol {
+.wrapper .menu ul {
   list-style: none;
-  padding: 1rem;
   line-height: 2.2rem;
 }
 .wrapper .menu .social-icons {
@@ -88,6 +143,8 @@ body a:hover {
   text-transform: uppercase;
   letter-spacing: 5px;
   border: 2px dashed;
+  margin-top: 1rem;
+  padding: 1rem;
 }
 .wrapper .menu .m {
   color: var(--fiery-rose);
@@ -97,9 +154,6 @@ body a:hover {
 .wrapper .menu footer {
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: 2rem;
-  width: 100%;
   text-align: center;
   font-weight: 900;
 }
@@ -110,6 +164,7 @@ body a:hover {
 }
 .wrapper .main-content h2 {
   color: var(--fiery-rose);
+  text-align: center;
 }
 .wrapper .main-content .content-intro {
   display: flex;
@@ -118,10 +173,6 @@ body a:hover {
 }
 .wrapper .main-content .content-intro p {
   width: 80%;
-}
-.wrapper .main-content h2, .wrapper .main-content h3 {
-  text-align: center;
-  padding: 1rem 0;
 }
 .wrapper .main-content .content-intro p {
   padding: 1rem;
@@ -143,6 +194,7 @@ body a:hover {
 .wrapper .main-content .games .game .h3-subh {
   border: 2px dashed rgb(153, 153, 153);
   margin: 1rem 0;
+  padding: .5rem;
   width: 100%;
   background-color: var(--blue-jeans-lesser);
   text-transform: uppercase;
@@ -166,10 +218,6 @@ body a:hover {
   margin: 0 auto;
   text-align: center;
 }
-.wrapper .main-content .independant-game .the-game .oops {
-  color: var(--fiery-rose);
-  font-weight: 700;
-}
 .wrapper .main-content .independant-game .the-game h3 {
   text-transform: uppercase;
   font-size: 2.5rem;
@@ -182,17 +230,18 @@ body a:hover {
   color: var(--fiery-rose);
   font-weight: 500;
 }
-.wrapper .main-content .independant-game .the-game .greenNum {
-  color: green;
-  font-weight: 700;
+
+.full-screen-game .independant-game .the-game .the-list,  .wrapper .main-content .independant-game .the-game .the-list {
+  border: 2px dashed var(--grey);
+  background-color: var(--primary-background);
 }
+
 .wrapper .main-content .independant-game .individual-numbers, .wrapper .main-content .independant-game .plus {
   font-size: 3rem;
 }
 .wrapper .main-content .independant-game input {
   width: 300px;
   padding: 1rem;
-  margin: 0.5rem;
   font-size: 1.2rem;
   border: none;
   border-radius: 30px;
@@ -201,7 +250,7 @@ body a:hover {
 .wrapper .main-content .independant-game button {
   width: 150px;
   padding: 1rem;
-  margin: 0.5rem;
+  margin: .5rem 0;
   font-size: 1.2rem;
   border-radius: 30px;
   cursor: pointer;
@@ -316,61 +365,144 @@ body a:hover {
   padding: 5px;
   font-style: italic;
 }
+.the-list i {
+  font-style: normal;
+}
+.grade {
+  color: #c2c2c2;
+}
+.correct {
+  color: green;
+  font-weight: bold;
+}
+.wrong {
+  color: red;
+  font-weight: bold;
+}
+.empty {
+  color: #8b8b8b;
+  font-weight: bold;
+}
+.fa-up-right-and-down-left-from-center, .fa-down-left-and-up-right-to-center {
+  float: right;
+  position: relative;
+}
+
+
 
 @media screen and (max-width: 2560px) {
-  .menu-bar-icon, .closebtn {
-    display: none;
-  }
+  
+  
 }
 @media screen and (max-width: 1440px) {
-  .wrapper {
-    display: flex;
+  .full-screen-game .independant-game {
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
   }
-  .wrapper .menu {
-    flex-basis: 60%;
+  .full-screen-game .independant-game .the-game h3 {
+    font-size: 2.5rem;
+    letter-spacing: 8px;
   }
-  .wrapper .menu ol {
-    line-height: 2rem;
+  .full-screen-game .independant-game .the-game h3 span {
+    font-weight: 700;
+  }
+  .full-screen-game .independant-game .individual-numbers, .full-screen-game .independant-game .plus {
+    font-size: 3rem;
+  }
+  .full-screen-game .independant-game input {
+    width: 50%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 1.7rem;
+  }
+  .full-screen-game .independant-game button {
+    width: 25%;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    border-radius: 1.7rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  .wrapper .menu ol {
-    line-height: 1.5rem;
+  .steps-and-illustrations {
+    display: flex !important;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 768px) {
-  .main-content .games .steps-and-illustrations {
-    display: grid;
-    grid-template-columns: 1fr;
+  .menu {
+    display: none !important;
   }
-  .main-content .games .independant-game .the-game h3 {
+  .show-nav {
+    display: flex !important;
+    position: fixed !important;
+    z-index: 6;
+    background: rgba(98, 187, 255, 0.8) !important;
+  }
+  .fa-xmark {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    visibility: visible;
     font-size: 2rem;
   }
-  .menu {
-    display: none;
-    transition: 0.5s;
-  }
-  .menu-bar-icon {
-    display: block;
-  }
-  .closebtn {
-    display: block;
+  .fa-bars {
+    position: fixed;
+    visibility: visible;
+    font-size: 2rem;
+    background: var(--blue-jeans-less);
+    padding: .8rem;
+    z-index: 7;
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 425px) {
-  .wrapper .main-content .menu-bar-icon {
-    position: fixed;
-    top: 0.5rem;
-    left: 0.5rem;
+  #users-answer {
+    width: 100%;
   }
-  .wrapper .main-content .independant-game .the-game h3 {
+  .show-nav {
+    width: 100%;
+    height: 100vh;
+    background: rgba(98, 187, 255, 0.8) !important;
+  }
+  .wrapper .main-content .independant-game button {
+    width: 100%;
+  }
+  .wrapper .main-content .independant-game .the-game h3  {
+    font-size: 2rem;
+  }
+
+  .the-list span, .the-list i {
+    font-size: 2rem !important;
+  }
+
+  .full-screen-game .independant-game {
+    margin: 1rem;
+  }
+  
+  .full-screen-game .independant-game .the-game h3 {
     font-size: 1.5rem;
+    letter-spacing: 8p
   }
-  .wrapper .main-content .independant-game .the-game .individual-numbers, .wrapper .main-content .independant-game .the-game .plus {
-    font-size: 1.5rem;
+  .full-screen-game .independant-game .the-game .the-list {
+    margin: 1rem 0;
   }
-  .wrapper .main-content .independant-game .controls input, .wrapper .main-content .independant-game .controls button {
-    width: 80%;
-    padding: 0.5rem;
+  
+  .full-screen-game .independant-game input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 1.7rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+  .full-screen-game .independant-game button {
+    width: 100%;
+    padding: 1rem;
+    margin: .5rem 0;
+    font-size: 1.2rem;
+    border-radius: 1.7rem;
+  }
+  #submit {
+    margin: 1rem 0;
+  }
+}
