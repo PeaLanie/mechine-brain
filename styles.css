@@ -19,6 +19,7 @@
 }
 
 body {
+  position: relative;
   background-color: var(--background);
   color: var(--prussian-blue);
   font-family: "Poppins", sans-serif;
@@ -72,7 +73,8 @@ body a:hover {
   width: 50%;
   padding: 2rem;
   font-size: 2.4rem;
-  border: none;
+  border: 2px dashed var(--grey);
+  transition: border 500ms ease-in-out;
   border-radius: 3.3rem;
   background-color: var(--primary-background);
 }
@@ -100,7 +102,7 @@ body a:hover {
   background-color: var(--blue-jeans);
 }
 
-.fa-xmark {
+.cls-side-nav {
   visibility: hidden;
 }
 .fa-bars {
@@ -239,17 +241,22 @@ body a:hover {
 .wrapper .main-content .independant-game .individual-numbers, .wrapper .main-content .independant-game .plus {
   font-size: 3rem;
 }
+.the-list span {
+  font-weight: bolder;
+}
 .wrapper .main-content .independant-game input {
   width: 300px;
   padding: 1rem;
+  margin-top: .5rem;
   font-size: 1.2rem;
-  border: none;
+  border: 2px dashed var(--grey);
   border-radius: 30px;
   background-color: var(--primary-background);
+  transition: border 500ms ease-in-out;
 }
 .wrapper .main-content .independant-game button {
   width: 150px;
-  padding: 1rem;
+  padding: .5rem 1rem;
   margin: .5rem 0;
   font-size: 1.2rem;
   border-radius: 30px;
@@ -372,7 +379,7 @@ body a:hover {
   color: #c2c2c2;
 }
 .correct {
-  color: green;
+  color: #2cba00;
   font-weight: bold;
 }
 .wrong {
@@ -386,6 +393,78 @@ body a:hover {
 .fa-up-right-and-down-left-from-center, .fa-down-left-and-up-right-to-center {
   float: right;
   position: relative;
+}
+
+.results_timer {
+  display: flex;
+  justify-content: center;
+  
+}
+.progress {
+  width: 100%;
+  height: 5px;
+  background-color: var(--grey);
+  position: relative;
+  border-radius: 2.5px;
+}
+.progress_inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #2cba00;
+  transition: background 500ms ease-in, width 1000ms ease-in-out;
+}
+.results_timer label {
+  width: 200px;
+  border-right: 1px solid var(--grey);
+  text-align: left;
+}
+.results_timer .timer {
+  width: 100px;
+  text-align: left;
+  padding: 0 .5rem;
+}
+#timer {
+  font-size: larger;
+  font-weight: bold;
+}
+.timeout_alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  border: 1px solid var(--fiery-rose);
+  width: 300px;
+  box-shadow: 2px 2px 3px;
+  transform: translate(-50%, -50%) scale(0);
+  visibility: hidden;
+  z-index: 7;
+  margin: auto;
+  transition: transform 300ms ease-in-out;
+}
+.timeout_alert_visible {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+.timeout_alert button {
+  border-radius: 0 !important;
+  padding: .5rem 0;
+  background-color: var(--fiery-rose);
+  border: none;
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cls-alert {
+  border: 1px solid;
+  margin-top: .5rem;
+  padding: 3px  5px;
+  cursor: pointer;
 }
 
 
@@ -413,6 +492,7 @@ body a:hover {
   .full-screen-game .independant-game input {
     width: 50%;
     padding: 1rem;
+    margin-top: .5rem;
     font-size: 1.2rem;
     border-radius: 1.7rem;
   }
@@ -440,7 +520,7 @@ body a:hover {
     z-index: 6;
     background: rgba(98, 187, 255, 0.8) !important;
   }
-  .fa-xmark {
+  .cls-side-nav {
     position: absolute;
     top: 0;
     cursor: pointer;

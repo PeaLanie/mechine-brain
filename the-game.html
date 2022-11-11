@@ -17,27 +17,48 @@
                 <section class="the-game">
                     <a href="index.html#the-game"><i class="fa-solid fa-down-left-and-up-right-to-center"></i></a>
                     <h3><span>Y</span>our <span>P</span>ractice <span>P</span>latform</h3>
-                    <div class="the-list">
-                        <span class="individual-numbers" id="basic1"></span>
-                        <i class="plus">+</i>
-                        <span class="individual-numbers" id="basic2"></span>
-                        <i class="plus">+</i>
-                        <span class="individual-numbers" id="basic3"></span>
-                        <i class="plus">+</i>
-                        <span class="individual-numbers" id="basic4"></span>
-                        <i class="plus">+</i>
-                        <span class="individual-numbers" id="basic5"></span>
-                    </div>
-                    <div class="controls">
-                        <label for="">Results = </label><span><span id="grade" class="grade">No Results Yet</span></span><br>
-                        <input type="text" inputmode="numeric" id="users-answer" name="users_answer" placeholder="Your Answer..."><br>
-                        <button type="button" id="submit" class="gameBtns-submit">Submit</button>
-                        <button type="button" id="reload" class="gameBtns-reload">Reload</button>
-                    </div>
+                        <div class="the-list">
+                            <span class="individual-numbers" id="basic1"></span>
+                            <i class="plus">+</i>
+                            <span class="individual-numbers" id="basic2"></span>
+                            <i class="plus">+</i>
+                            <span class="individual-numbers" id="basic3"></span>
+                            <i class="plus">+</i>
+                            <span class="individual-numbers" id="basic4"></span>
+                            <i class="plus">+</i>
+                            <span class="individual-numbers" id="basic5"></span>
+                        </div>
+                        
+                        <div class="controls">
+                            <div class="results_timer_progress">
+                                <div class="results_timer">
+                                    <label for="">Results = 
+                                        <span id="grade" class="grade">No Results Yet
+                                        </span>
+                                    </label>
+                                    <span class="timer">Timer:              <span id="timer">10</span>
+                                    </span>
+                                </div>
+                                
+                                <div class="progress">
+                                    <div class="progress_inner"></div>
+                                </div>
+                            </div>
+                            
+                            <input type="text" inputmode="numeric" id="users-answer" name="users_answer" placeholder="Your Answer..."><br>
+                            <button type="button" id="submit" class="gameBtns-submit">Submit</button>
+                            <!-- <button type="button" id="reload" class="gameBtns-reload">Reload</button> -->
+                        </div>
                 </section>
             </div>
             </div>
         </main>
+        <div class="timeout_alert">
+            <i class="fa-solid fa-xmark cls-alert"></i>
+            <h2>Game Over!</h2>
+            <div>Score: <span class="score_out">0</span></div>
+            <button id="play_again_btn">Play Again</button>
+        </div>
     <script src="jquery.js"></script>
     <script src="app.js"></script>
 </body>
