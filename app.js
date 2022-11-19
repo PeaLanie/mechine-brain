@@ -18,6 +18,7 @@ $(function() {
         score = 0
         score_out.text(score)
         timeout_alert.removeClass('timeout_alert_visible')
+        blur_bg.css('visibility', 'hidden')
         timer.text(countdown)
         progress_bar.css('width', '100%')
         progress_bar.css('background', '#2cba00')
@@ -28,6 +29,7 @@ $(function() {
             each_num = $(this).text()
             sum += parseInt(each_num)
         })
+        correct_answer.text('Correct answer was ' + sum)
     })
     const timer = $('#timer')
     let numbers_el = $('.the-list span')
@@ -39,6 +41,7 @@ $(function() {
     let my_interval_submit
     let score = 0
     let score_out = $('.score_out')
+    let correct_answer = $('.timeout_alert .correct_answer')
     const input_el = $('#users-answer')
     
     numbers_el.each(function() {
@@ -48,6 +51,8 @@ $(function() {
         sum += parseInt(each_num)
     })
     
+    
+
     $('#submit').on('click', () => {
         let users_answer = parseInt(input_el.val())
         if (users_answer === sum) {
@@ -95,6 +100,8 @@ $(function() {
                 } else if (countdown == 0) {
                     clearInterval(my_interval)
                     timeout_alert.addClass('timeout_alert_visible')
+                    blur_bg.css('visibility', 'visible')
+                    correct_answer.text('Correct answer was ' + sum)
                     document.activeElement.blur()
                 }
             }, 1000)
@@ -121,39 +128,40 @@ $(function() {
     })
     const timeout_alert = $('.timeout_alert')
     const progress_bar = $('.progress_inner')
+    const blur_bg = $('.blur_bg')
     input_el.on('click', () => {
-        //setTimeout(() => {
-            if (click_count == 0) {
-                countdown = 10
-                my_interval = setInterval(() => {
-                    if (countdown > 0) {
-                        countdown--
-                        let progress_witdth = countdown / 10 * 100
-                        
-                        progress_bar.css('width', progress_witdth + '%')
-                        timer.text(countdown)
-                        if (countdown < 8) {
-                            progress_bar.css('background', 'yellow')
-                        }
-                        if (countdown < 6) {
-                            progress_bar.css('background', 'orange')
-                        }
-                        if (countdown <  4) {
-                            progress_bar.css('background', '#ff5964ff')
-                        }
-                        if (countdown < 2) {
-                            progress_bar.css('background', 'red')
-                        }
-                    } else if (countdown == 0) {
-                        clearInterval(my_interval)
-                        timeout_alert.addClass('timeout_alert_visible')
-                        timeout_alert.focus()
-                        document.activeElement.blur()
+        
+        if (click_count == 0) {
+            countdown = 10
+            my_interval = setInterval(() => {
+                if (countdown > 0) {
+                    countdown--
+                    let progress_witdth = countdown / 10 * 100
+                    
+                    progress_bar.css('width', progress_witdth + '%')
+                    timer.text(countdown)
+                    if (countdown < 8) {
+                        progress_bar.css('background', 'yellow')
                     }
-                }, 1000)
-            }
-            click_count++
-        //}, 1000)
+                    if (countdown < 6) {
+                        progress_bar.css('background', 'orange')
+                    }
+                    if (countdown <  4) {
+                        progress_bar.css('background', '#ff5964ff')
+                    }
+                    if (countdown < 2) {
+                        progress_bar.css('background', 'red')
+                    }
+                } else if (countdown == 0) {
+                    clearInterval(my_interval)
+                    timeout_alert.addClass('timeout_alert_visible')
+                    blur_bg.css('visibility', 'visible')
+                    correct_answer.text('Correct answer was ' + sum)
+                    document.activeElement.blur()
+                }
+            }, 1000)
+        }
+        click_count++ 
     })
 
     const play_again_btn = $('#play_again_btn')
@@ -169,6 +177,7 @@ $(function() {
             sum += parseInt(each_num)
         })
         timeout_alert.removeClass('timeout_alert_visible')
+        blur_bg.css('visibility', 'hidden')
         countdown = 10
         timer.text(countdown)
         progress_bar.css('width', '100%')
@@ -198,6 +207,8 @@ $(function() {
                 } else if (countdown == 0) {
                     clearInterval(my_interval)
                     timeout_alert.addClass('timeout_alert_visible')
+                    blur_bg.css('visibility', 'visible')
+                    correct_answer.text('Correct answer was ' + sum)
                     document.activeElement.blur()
                 }
             }, 1000)

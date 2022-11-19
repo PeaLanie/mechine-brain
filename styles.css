@@ -412,7 +412,7 @@ body a:hover {
   height: 100%;
   position: absolute;
   background: #2cba00;
-  transition: background 500ms ease-in, width 1000ms ease-in-out;
+  transition: background 1000ms, width 1500ms;
 }
 .results_timer label {
   width: 200px;
@@ -433,22 +433,30 @@ body a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  position: absolute;
   background-color: #fff;
   border: 1px solid var(--fiery-rose);
   width: 300px;
   box-shadow: 2px 2px 3px;
-  transform: translate(-50%, -50%) scale(0);
+  transform: scale(0);
   visibility: hidden;
   z-index: 7;
-  margin: auto;
-  transition: transform 300ms ease-in-out;
+  transition: transform 300ms;
+}
+
+.blur_bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
 }
 .timeout_alert_visible {
   visibility: visible;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
 }
 .timeout_alert button {
   border-radius: 0 !important;
@@ -459,6 +467,9 @@ body a:hover {
   color: #fff;
   font-weight: 700;
   cursor: pointer;
+}
+.timeout_alert > div {
+  padding: 1rem;
 }
 .cls-alert {
   border: 1px solid;
