@@ -14,42 +14,20 @@
 <body>
     <div class="wrapper">
         <i class="fa-solid fa-bars"></i>
-<!------------------------------ SIDE BAR ------------------------------------->
-        <aside id="side-nav" class="menu">
 
-            <i class="fa-solid fa-xmark cls-side-nav"></i>
-
+        <aside id="side-nav">
             <h1>Mechine Brain</h1>
-
             <ul>
                 <li><a href="#welcome-link"><h3>Welcome...</h3></a></li>
                 <li><a href="#the-theory"><h3>The Theory</h3></a></li>
                 <li><a href="#basic-addition-link"><h3>Basics</h3></a></li>
                 <li><a href="#the-game"><h3>The Game</h3></a></li>
             </ul>
-
-            <footer>
-                Mechine Brain &copy; 2022
-                <div class="social-icons">
-                    <a href="https://github.com/PeaLanie" target="_blank"><i class="fa-brands fa-github"></i></a>
-    
-                    <a href="https://www.linkedin.com/in/thembinkosi-mkhungo-674a11244/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    
-                    <a href="https://www.facebook.com/pealanie.sodium" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
-    
-                    <a href="https://www.instagram.com/pealanie.sodium/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-    
-                    <a href="mailto:pealanie.sodium@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-            </footer>
         </aside>
-<!------------------------------ END OF THE SIDE BAR ------------------------------>
 
-<!-------------------------------- MAIN CONTENT ----------------------------------->
         <main class="main-content">
-            <!-- <div id="menu-icon" class="menu-bar-icon">&#9776;</div> -->
-            
-            <h2 id="welcome-link">Welcome to Mechine Brain!</h2>
+            <h1 id="welcome-link">Welcome to Mechine Brain!</h1>
+
             <div class="content-intro">
                 <p>
                     Welcome to the <q><em>Basic Addition</em></q> game, which is not really a game because being stuck on adding up basic easy numbers is not really a game; it's embarasing. Adding basic numbers such as 1-9 shouldn't be a hustle. We have built this game to make it easy for everyone. At the end of this game you should be able to add up numbers like this: 3 + 7 + 4 + 9 + 1, like a pro.
@@ -57,9 +35,9 @@
                 <p>
                     Here at <a href="#welcome-link"><strong>Mechine Brain</strong></a> we are going to teach you our theory behind adding intergers (Note: the use of <strong>intergers</strong> (whole numbers) is intensional, because our theory is reliant on numbers with no decimals). At the beginning it will feel dounting and difficult, but with a little bit of practice; you should see the difference.
                 </p>
-                <h3 id="the-theory">
+                <h2 id="the-theory">
                     The Basic Theory
-                </h3>
+                </h2>
                 <p>
                     When adding a list of numbers like: 3 + 7 + 4 + 9 + 1, the trick is to <em>simplify</em> the list of digits into easy numbers that can be added with little effort. In the list above, wouldn't it be easy to first add 9 and 1? Yes! Because 9 and 1 adds up to 10. 7 and 3 also adds up to 10. Now you know that you're left with 4. By adding 10 (which is 9 + 1) and 10 (which is 7 + 3) and 4 it is easy to conclude that the sum is 24.
                 </p>
@@ -68,10 +46,9 @@
                 </p>
             </div>
 
-
             <div class="games basics">
                 <div class="game addition">
-                    <h3 id="basic-addition-link" class="h3-subh">Basic Addition</h3>
+                    <h2 id="basic-addition-link" class="h3-subh">Basic Addition</h2>
                     <strong class="how-to">How to add up a list of real numbers between 1 and 9?</strong>
                     <div class="examples">Example #1</div>
                     <p>
@@ -120,9 +97,6 @@
                                     <div class="list">
                                         37
                                     </div>
-                                    <span class="small r">-2</span>
-                                    <span class="small g x">+1</span>
-                                    <span class="small g y">+1</span>
                             </div>
                         </div>
                     </div>
@@ -173,9 +147,6 @@
                                     <div class="list">
                                         32
                                     </div>
-                                    <span class="small rx2">-2</span>
-                                    <span class="small g xx2">+1</span>
-                                    <span class="small g yx2">+1</span>
                             </div>
                         </div>
                     </div>
@@ -267,7 +238,6 @@
                             
                             <input type="text" inputmode="numeric" id="users-answer" name="users_answer" placeholder="Your Answer..."><br>
                             <button type="button" id="submit" class="gameBtns-submit">Submit</button>
-                            <!-- <button type="button" id="reload" class="gameBtns-reload">Reload</button> -->
                         </div>
                         
                     </section>
@@ -277,19 +247,35 @@
                     <strong>I strongly suggest that you practice the section above before moving on</strong> because the following sections are dependant on this section.
                 </p>
             </div>
-            
+
+            <footer>
+                <div>Brain &copy; <span class="footer-date"></span></div>
+                <div class="social-icons">
+                    <a href="https://github.com/PeaLanie" target="_blank"><i class="fa-brands fa-github"></i></a>
+    
+                    <a href="https://www.linkedin.com/in/thembinkosi-mkhungo-674a11244/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    
+                    <a href="https://www.facebook.com/pealanie.sodium" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+    
+                    <a href="https://www.instagram.com/pealanie.sodium/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    
+                    <a href="mailto:pealanie.sodium@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </footer>
+
         </main>
-        <div class="blur_bg">
-            <div class="timeout_alert">
-                <i class="fa-solid fa-xmark cls-alert"></i>
-                <h2>Game Over!</h2><span class="correct_answer"></span>
-                <div>Score: <span class="score_out">0</span></div>
-                <button id="play_again_btn">Play Again</button>
-            </div>  
-        </div>
+
+        
+
     </div>
-    
-    
+    <div class="blur_bg">
+        <div class="timeout_alert">
+            <i class="fa-solid fa-xmark cls-alert"></i>
+            <h2>Game Over!</h2><span class="correct_answer"></span>
+            <div>Score: <span class="score_out">0</span></div>
+            <button id="play_again_btn">Play Again</button>
+        </div>  
+    </div>
 <script src="jquery.js"></script>
 <script src="app.js"></script>
 </body>

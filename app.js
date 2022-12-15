@@ -1,15 +1,14 @@
 $(function() {
     $('.fa-bars').on('click', () => {
-        $('#side-nav').addClass('show-nav')
-        $('.fa-bars').hide()
+        $('#side-nav').toggleClass('show-nav')
     })
     $('.cls-side-nav').on('click', () => {
         $('#side-nav').removeClass('show-nav')
+        blur_bg.css('visibility', 'hidden')
         $('.fa-bars').show()
     })
     $('aside li').on('click', () => {
         $('#side-nav').removeClass('show-nav')
-        $('.fa-bars').show()
     })
     $('.cls-alert').on('click', () => {
         countdown = 10
@@ -31,6 +30,10 @@ $(function() {
         })
         correct_answer.text('Correct answer was ' + sum)
     })
+    const footerDateEl = $('.footer-date')
+    const currentTime = new Date()
+    let currentYear = currentTime.getFullYear()
+    footerDateEl.text(currentYear)
     const timer = $('#timer')
     let numbers_el = $('.the-list span')
     let sum = 0
@@ -38,7 +41,6 @@ $(function() {
     let click_count = 0
     let countdown = 10
     let my_interval
-    let my_interval_submit
     let score = 0
     let score_out = $('.score_out')
     let correct_answer = $('.timeout_alert .correct_answer')
