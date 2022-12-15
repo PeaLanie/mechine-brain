@@ -376,7 +376,8 @@
     position: absolute;
     left: 0;
     padding: 1rem;
-    background: gray;
+    border-top: 2px solid gray;
+    background: var(--primary-background);
     width: 100%;
     font-weight: bold;
   }
