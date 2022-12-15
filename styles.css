@@ -140,7 +140,6 @@
     border: 2px solid var(--blue-jeans);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: -5px 5px 5px var(--grey);
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
@@ -296,9 +295,8 @@
 
 
   .independant-game {
-    border: 1px solid var(--blue-jeans);
+    border: 2px solid var(--blue-jeans);
     border-radius: 10px;
-    box-shadow: var(--shadow-box);
     padding: 1rem;
     max-width: 600px;
     text-align: center;
@@ -352,7 +350,7 @@
     cursor: pointer;
   }
   .gameBtns-submit {
-    border: 2px solid var(--blue-jeans);
+    border: 1px solid var(--blue-jeans);
   }
   .gameBtns-submit:hover {
     background-color: var(--blue-jeans);
